@@ -32,8 +32,8 @@
 <body class="bg-slate-900 text-slate-100 min-h-screen font-sans pb-12">
 
   <!-- HEADER -->
-  <header class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50 shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+  <header class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50 shadow-md">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
         <div>
           <h1 class="text-xl sm:text-2xl font-bold text-sky-400 flex items-center gap-2">
@@ -126,6 +126,227 @@
               </select>
             </div>
           </div>
+
+<div>
+  <label class="block text-xs font-medium text-slate-300 mb-1">
+    Problem List
+  </label>
+
+  <textarea
+      id="problem-list"
+      rows="4"
+      placeholder="1. Septic Shock
+2. HAP
+3. AKI Stage 3
+4. Acute Hypoxic Respiratory Failure"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100">
+  </textarea>
+</div>
+
+<div class="grid grid-cols-2 gap-3">
+
+  <div>
+    <label class="block text-xs font-medium text-slate-300 mb-1">
+      <div class="grid grid-cols-2 gap-3">
+
+  <div>
+    <label class="block text-xs font-medium text-slate-300 mb-1">
+      Target MAP
+    </label>
+
+    <input
+      id="target-map"
+      type="number"
+      value="65"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5">
+  </div>
+
+  <div>
+    <label class="block text-xs font-medium text-slate-300 mb-1">
+      Resuscitation Status
+    </label>
+
+    <select
+      id="resus-status"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5">
+
+      <option>Full Code</option>
+      <option>DNAR</option>
+      <option>DNI</option>
+      <option>Palliative</option>
+
+    </select>
+
+  </div>
+
+</div>
+
+
+Resuscitation Status
+    </label>
+
+    <select
+      id="resus-status"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+
+      <option>Full Code</option>
+      <option>DNAR</option>
+      <option>DNI</option>
+      <option>Comfort Care</option>
+
+    </select>
+  </div>
+
+  <div>
+    <label class="block text-xs font-medium text-slate-300 mb-1">
+      Highest O₂ Support
+    </label>
+
+    <select
+      id="highest-o2"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+
+      <option>Room Air</option>
+      <option>Nasal Cannula</option>
+      <option>Venturi</option>
+      <option>NRBM</option>
+      <option>HFNC</option>
+      <option>NIV</option>
+      <option>Intubated</option>
+
+    </select>
+  </div>
+
+</div>
+
+<div>
+
+  <label class="block text-xs font-medium text-slate-300 mb-1">
+    Peri-Intubation Arrest
+  </label>
+
+  <select
+      id="peri-arrest"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+
+      <option>No</option>
+      <option>Yes</option>
+
+  </select>
+
+</div>
+
+<!-- RESPIRATORY & HEMODYNAMIC MONITORING -->
+
+<div class="bg-slate-900 border border-sky-700/50 rounded-lg p-3 mt-3">
+
+  <h3 class="text-xs font-bold text-sky-300 uppercase mb-3">
+    Respiratory & Haemodynamic Monitoring
+  </h3>
+
+  <div class="grid grid-cols-2 gap-3">
+
+    <div>
+      <label class="block text-xs text-slate-300 mb-1">
+        Heart Rate
+      </label>
+
+      <input
+        id="hr"
+        type="number"
+        placeholder="120"
+        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+    </div>
+
+    <div>
+      <label class="block text-xs text-slate-300 mb-1">
+        SBP
+      </label>
+
+      <input
+        id="sbp"
+        type="number"
+        placeholder="90"
+        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-3 gap-3 mt-3">
+
+    <div>
+      <label class="block text-xs text-slate-300 mb-1">
+        SpO₂
+      </label>
+
+      <input
+        id="spo2"
+        type="number"
+        placeholder="95"
+        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+    </div>
+
+    <div>
+      <label class="block text-xs text-slate-300 mb-1">
+        FiO₂ (%)
+      </label>
+
+      <input
+        id="fio2"
+        type="number"
+        placeholder="60"
+        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+    </div>
+
+    <div>
+      <label class="block text-xs text-slate-300 mb-1">
+        RR
+      </label>
+
+      <input
+        id="rr"
+        type="number"
+        placeholder="28"
+        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-2 gap-3 mt-3">
+
+    <div class="bg-slate-800 rounded p-3 border border-slate-700">
+
+      <div class="text-xs text-slate-400">
+        Shock Index
+      </div>
+
+      <div
+        id="shock-index"
+        class="text-lg font-bold text-amber-300">
+
+        --
+      </div>
+
+    </div>
+
+    <div class="bg-slate-800 rounded p-3 border border-slate-700">
+
+      <div class="text-xs text-slate-400">
+        ROX Score
+      </div>
+
+      <div
+        id="rox-score"
+        class="text-lg font-bold text-sky-300">
+
+        --
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
           <div>
             <div class="flex justify-between items-center mb-1">
