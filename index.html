@@ -142,12 +142,21 @@
       class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100">
   </textarea>
 </div>
+<div>
+  <label class="block text-xs font-medium text-slate-300 mb-1">
+    Comorbidities
+  </label>
 
+  <textarea
+      id="comorbid"
+      rows="2"
+      placeholder="DM, HTN, CKD, IHD, AF..."
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100">
+  </textarea>
+</div>
 <div class="grid grid-cols-2 gap-3">
 
-  <div>
-    <label class="block text-xs font-medium text-slate-300 mb-1">
-      <div class="grid grid-cols-2 gap-3">
+  <div class="grid grid-cols-2 gap-3">
 
   <div>
     <label class="block text-xs font-medium text-slate-300 mb-1">
@@ -158,31 +167,26 @@
       id="target-map"
       type="number"
       value="65"
-      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5">
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
   </div>
 
   <div>
     <label class="block text-xs font-medium text-slate-300 mb-1">
-      Resuscitation Status
+      Target SpO₂ (%)
     </label>
 
-    <select
-      id="resus-status"
-      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5">
-
-      <option>Full Code</option>
-      <option>DNAR</option>
-      <option>DNI</option>
-      <option>Palliative</option>
-
-    </select>
-
+    <input
+      id="target-spo2"
+      type="number"
+      value="92"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
   </div>
 
-</div>
+<div class="grid grid-cols-2 gap-3">
 
-
-Resuscitation Status
+  <div>
+    <label class="block text-xs font-medium text-slate-300 mb-1">
+      Resuscitation Status
     </label>
 
     <select
@@ -193,9 +197,67 @@ Resuscitation Status
       <option>DNAR</option>
       <option>DNI</option>
       <option>Comfort Care</option>
+      <option>To Be Decided</option>
 
     </select>
+
   </div>
+
+  <div>
+    <label class="block text-xs font-medium text-slate-300 mb-1">
+      Highest O₂ Support
+    </label>
+
+    <select
+      id="highest-o2"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+
+      <option>Room Air</option>
+      <option>Nasal Cannula</option>
+      <option>Simple Mask</option>
+      <option>Venturi Mask</option>
+      <option>NRBM</option>
+      <option>HFNC</option>
+      <option>NIV / BiPAP</option>
+      <option>Intubated</option>
+
+    </select>
+
+  </div>
+
+<div class="grid grid-cols-2 gap-3">
+
+  <div>
+    <label class="block text-xs font-medium text-slate-300 mb-1">
+      Highest FiO₂ (%)
+    </label>
+
+    <input
+      id="highest-fio2"
+      type="number"
+      min="21"
+      max="100"
+      value="21"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+  </div>
+
+  <div>
+    <label class="block text-xs font-medium text-slate-300 mb-1">
+      Peri-Intubation Arrest
+    </label>
+
+    <select
+      id="peri-arrest"
+      class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-sm">
+
+      <option>No</option>
+      <option>Yes</option>
+
+    </select>
+
+  </div>
+
+
 
   <div>
     <label class="block text-xs font-medium text-slate-300 mb-1">
